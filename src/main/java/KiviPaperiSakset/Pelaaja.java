@@ -1,6 +1,8 @@
 
 package KiviPaperiSakset;
 
+import java.util.Random;
+
 /**
  *
  * @author Ira Dook
@@ -8,34 +10,22 @@ package KiviPaperiSakset;
 public class Pelaaja {
 
     int voitot;      // Voittojen lukumäärä
-    int voitotYhteensä;
 
     /**
      * Valitse randomilla kivi, paperi tai sakset
      */
     public String pelaajanValinta() {
-        String valinta = "";
-        int c = (int) (Math.random() * 3);
-        switch (c) {
-            case 0:
-                valinta = ("kivi");
-                break;
-            case 1:
-                valinta = ("paperi");
-                break;
-            case 2:
-                valinta = ("sakset");
-                break;
-        }
-        return valinta;
+        String[] valinnat = {"kivi", "paperi", "sakset"};
+        Random random = new Random();
+        int index = random.nextInt(valinnat.length);
+        return valinnat[index];
     }
 
-    public int setVoitot() {
-        int voitotYhteensä = voitot++;
-        return voitotYhteensä;
+    public void setVoitot() {
+        voitot++;
     }
 
     public int getVoitot() {
-        return (voitot);
+        return voitot;
     }
 }
