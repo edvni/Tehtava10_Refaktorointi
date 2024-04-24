@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class Pelaaja {
 
-    int voitot;      // Voittojen lukumäärä
+    private int voitot;      // Voittojen lukumäärä
 
     /**
      * Valitse randomilla kivi, paperi tai sakset
@@ -20,10 +20,17 @@ public class Pelaaja {
         return valinnat[index];
     }
 
-    public void setVoitot() {
+    /**
+     * Lisää pelaajalle yksi voitto
+     */
+    public void lisääVoitto() {
         voitot++;
     }
 
+    /**
+     * Hae pelaajan voitot
+     * @return voitot
+     */
     public int getVoitot() {
         return voitot;
     }
