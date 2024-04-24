@@ -1,4 +1,3 @@
-
 package KiviPaperiSakset;
 
 import java.util.Random;
