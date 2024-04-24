@@ -111,3 +111,7 @@ Refactor the code so that it aligns with OOP principles.
         } while (true);
      ```
      - added newlines, tabs, and overall re-organized it.
+
+### 3. Testability
+Take testability in to account. Further refactor the code. e.g move code in to their own methods.
+Prepare JUnit 5 tests accordingly.     
