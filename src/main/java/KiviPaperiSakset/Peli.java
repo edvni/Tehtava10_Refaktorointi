@@ -16,9 +16,9 @@ public class Peli {
     /**
      * Peli konstruktori
      */
-    public Peli() {
-        p1 = new Pelaaja();
-        p2 = new Pelaaja();
+    public Peli(Pelaaja p1, Pelaaja p2) {
+        this.p1 = p1;
+        this.p2 = p2;
         erä = 1;
         tasapelit = 0;
     }
