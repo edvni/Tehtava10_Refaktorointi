@@ -114,4 +114,15 @@ Refactor the code so that it aligns with OOP principles.
 
 ### 3. Testability
 Take testability in to account. Further refactor the code. e.g move code in to their own methods.
-Prepare JUnit 5 tests accordingly.     
+Prepare JUnit 5 tests accordingly.
+
+#### Refactor code to better serve testing
+1. Detach some code in to their own methods.
+    - Create `pelaa()`-method which houses the flow of the game.
+    - Create `kukaVoitti()`-method to determine the winner.
+    - Create `loppuikoPeli()` -method to check player's wins.
+2. Create Test classes for both Peli and Pelaaja.
+    - PeliTest.java
+      - `testPeli()`
+    - PelaajaTest.java
+      - `testLisääVoitto()`
