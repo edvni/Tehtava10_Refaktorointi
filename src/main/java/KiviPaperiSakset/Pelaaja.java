@@ -3,7 +3,7 @@ package KiviPaperiSakset;
 import java.util.Random;
 
 /**
- *
+ * Pelaaja -luokka kivi, paperi, sakset -peliin
  * @author Ira Dook
  */
 public class Pelaaja {
@@ -12,6 +12,7 @@ public class Pelaaja {
 
     /**
      * Valitse randomilla kivi, paperi tai sakset
+     * @return valinta
      */
     public String pelaajanValinta() {
         String[] valinnat = {"kivi", "paperi", "sakset"};
