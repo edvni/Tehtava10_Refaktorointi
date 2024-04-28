@@ -1,7 +1,7 @@
 package KiviPaperiSakset;
 
 /**
- * Kivi, paperi, sakset -peli
+ * Kivi, paperi, sakset -peli luokka
  * @author Ira Dook
  */
 public class Peli {
@@ -15,6 +15,8 @@ public class Peli {
 
     /**
      * Peli konstruktori
+     * @param p1 pelaaja 1
+     * @param p2 pelaaja 2
      */
     public Peli(Pelaaja p1, Pelaaja p2) {
         this.p1 = p1;

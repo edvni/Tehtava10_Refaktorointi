@@ -122,7 +122,7 @@ Prepare JUnit 5 tests accordingly.
     - Create `kukaVoitti()`-method to determine the winner.
     - Create `loppuikoPeli()` -method to check player's wins.
 2. Create Test classes for both Peli and Pelaaja.
-    - PeliTest.java
+    - TestClasses.PeliTest.java
       - `testPeli()`
-    - PelaajaTest.java
+    - TestClasses.PelaajaTest.java
       - `testLisääVoitto()`
