@@ -11,7 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PelaajaTest {
 
     /**
-     * Testaa voittojen lisääminen
+     * Testaa voittojen lisääminen Pelaaja -oliolle
+     * Voittojen määrän tulee olla yksi lisäämisen jälkeen
      */
     @Test
     public void testLisääVoitto() {
@@ -22,7 +23,10 @@ public class PelaajaTest {
     }
 
     /**
-     * Testaa pelaajan valinta
+     * Testaa Pelaaja -olion valintametodia
+     * Valinnan tulee olla joko "kivi", "paperi" tai "sakset"
+     * Testi ei ole täysin luotettava, koska valinta on satunnainen
+     * ja voi olla mikä tahansa kolmesta vaihtoehdosta
      */
     @Test
     public void testPelaajanValinta() {
@@ -35,7 +39,34 @@ public class PelaajaTest {
     }
 
     /**
-     * Testaa voittojen hakeminen kun voitot on nolla
+     * Testaa voittojen lisääminen Pelaaja -oliolle kun voittoja on alle kolme
+     */
+    @Test public void testLisääVoittoKunVoitotAlleKolme() {
+        Pelaaja pelaaja = new Pelaaja();
+        int maxVoitot = 3;
+        for (int i = 0; i < maxVoitot - 1; i++) {
+            pelaaja.lisääVoitto();
+            assertEquals(i + 1, pelaaja.getVoitot());
+        }
+    }
+
+    /**
+     * Testaa voittojen lisääminen Pelaaja -oliolle kun voittoja on kolme
+     */
+    @Test
+    public void testLisääVoittoKunVoitotKolme() {
+        Pelaaja pelaaja = new Pelaaja();
+        int maxVoitot = 3;
+        for (int i =  0; i < maxVoitot; i++) {
+            pelaaja.lisääVoitto();
+        }
+        pelaaja.lisääVoitto();
+        assertEquals(maxVoitot, pelaaja.getVoitot());
+    }
+
+    /**
+     * Testaa Pelaaja -olion voittojen hakeminen kun voitot on nolla
+     * Voittojen määrän tulee olla nolla
      */
     @Test
     public void testGetVoitotNone() {
@@ -44,7 +75,8 @@ public class PelaajaTest {
     }
 
     /**
-     * Testaa voittojen hakeminen kun voittoja lisätään yksi
+     * Testaa Pelaaja -olion voittojen hakeminen kun voitot on yksi
+     * Voittojen määrän tulee olla yksi
      */
     @Test
     public void testGetVoitotYksi() {
@@ -54,7 +86,8 @@ public class PelaajaTest {
     }
 
     /**
-     * Testaa voittojen hakeminen kun voittoja lisätään kaksi
+     * Testaa Pelaaja -olion voittojen hakeminen kun voitot on kaksi
+     * Voittojen määrän tulee olla kaksi
      */
     @Test
     public void testGetVoitotKaksi() {
@@ -65,7 +98,8 @@ public class PelaajaTest {
     }
 
     /**
-     * Testaa voittojen hakeminen kun voittoja lisätään kolme
+     * Testaa Pelaaja -olion voittojen hakeminen kun voitot on kolme
+     * Voittojen määrän tulee olla kolme
      */
     @Test
     public void testGetVoitotKolme() {

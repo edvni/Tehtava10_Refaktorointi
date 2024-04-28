@@ -22,10 +22,18 @@ public class Pelaaja {
     }
 
     /**
-     * Lisää pelaajalle yksi voitto
+     * Lisää pelaajalle yksi voitto.
+     * Pelaajalla voi olla enintään kolme voittoa.
+     * Jos pelaajalla on jo kolme voittoa, peli on päättynyt
+     * eikä pelaaja ei voi saada enempää voittoja.
      */
     public void lisääVoitto() {
-        voitot++;
+        int maxVoitot = 3;
+        if (voitot < maxVoitot) {
+            voitot++;
+        } else {
+            System.out.println("Pelaajalla on jo kolme voittoa! Peli on päättynyt");
+        }
     }
 
     /**

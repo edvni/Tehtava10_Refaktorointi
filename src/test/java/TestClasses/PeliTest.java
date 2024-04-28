@@ -18,7 +18,7 @@ public class PeliTest {
     private Pelaaja p2;
 
     /**
-     * Alusta testit: luo kaksi pelaajaa ja peli
+     * Alusta testit: luo kaksi Pelaaja-oliota ja Peli-olio
      */
     @BeforeEach
     public void setUp() {
