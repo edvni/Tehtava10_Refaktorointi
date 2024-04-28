@@ -123,6 +123,27 @@ Prepare JUnit 5 tests accordingly.
     - Create `loppuikoPeli()` -method to check player's wins.
 2. Create Test classes for both Peli and Pelaaja.
     - TestClasses.PeliTest.java
+      - `setUp()`
       - `testPeli()`
     - TestClasses.PelaajaTest.java
       - `testLisääVoitto()`
+      - `testPelaajanValinta()`
+      - `testGetVoitotNone()`
+      - `testGetVoitotYksi()`
+      - `testGetVoitotKaksi()`
+      - `testGetVoitotKolme()`
+### 4. Javadoc
+Add Javadoc comments to the methods and classes. Generate Javadoc HTML files. Push to repo.
+Javadoc files can be found in the `root/src/javadocs` folder.
+
+### 5. Java Code Coverage analysis
+Finally, do a test coverage analysis. I used JaCoCo for this purpose.
+#### Project Coverage
+![Project Coverage](coverage/project_coverage.png)
+#### Package Coverage
+![Package Coverage](coverage/package_coverage.png)
+#### Pelaaja Class Coverage
+![Pelaaja Class Coverage](coverage/pelaaja_coverage.png)
+#### Peli Class Coverage
+![Peli Class Coverage](coverage/peli_coverage.png)
+A few lines of code were not covered. Due to the nature of `tasapelit` variable in `kukaVoitti()`, it was decided to not test it.
