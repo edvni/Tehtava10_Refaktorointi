@@ -6,6 +6,8 @@ Explore the code and it's logic. Add appropriate comments.
 Take notes which details struck your eye first.
 (What things are in need of cleaning up and refactoring)
 
+#### Disclaimer: Some code snippets below represent ideas and suggestions. They are not the final code. Further refactoring was done after implementing said ideas.
+
 #### Pelaaja (Player) class
 1. Variable naming:
     - `voitotYhteensä` is redundant. `voitot` already keeps track of total wins.
